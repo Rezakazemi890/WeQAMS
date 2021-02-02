@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="MyUser_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MyUser">
+              <TabbedGroup Id="Item2">
+                <LayoutGroup Id="Item3">
+                  <TabbedGroup Id="Tabs">
+                    <LayoutGroup Id="Runs">
+                      <LayoutItem Id="TestRunResults1" ViewItem="TestRunResults" />
+                    </LayoutGroup>
+                  </TabbedGroup>
+                </LayoutGroup>
+              </TabbedGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

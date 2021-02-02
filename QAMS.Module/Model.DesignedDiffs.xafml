@@ -1,0 +1,857 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="QAMS" Copyright="2020" Company="We">
+  <BOModel>
+    <Class Name="QAMS.Module.BusinessObjects.TestManagement.TestRunResult" DefaultListViewAllowEdit="False" />
+  </BOModel>
+  <NavigationItems NavigationStyle="Accordion" StartupNavigationItem="MyScheduler_ListView">
+    <Items>
+      <Item Id="@f4859edd-5033-47e5-8dd8-574381ba8395" Caption="Management" ImageName="ChangeLabel" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="MyScheduler_ListView" ViewId="MyScheduler_ListView" ObjectKey="" Index="0" IsNewNode="True" />
+          <Item Id="Project_ListView" ViewId="Project_ListView" ObjectKey="" Index="1" IsNewNode="True" />
+          <Item Id="Milestone_ListView" ViewId="Milestone_ListView" ObjectKey="" Index="2" IsNewNode="True" />
+          <Item Id="TestCase_ListView" ViewId="TestCase_ListView" ObjectKey="" Index="3" IsNewNode="True" />
+          <Item Id="TestPlan_ListView" ViewId="TestPlan_ListView" ObjectKey="" Index="4" ImageName="InsertTableOfCaptions" IsNewNode="True" />
+          <Item Id="TestRun_ListView" ViewId="TestRun_ListView" ObjectKey="" Index="5" IsNewNode="True" />
+          <Item Id="CaseStep_ListView" ViewId="CaseStep_ListView" ObjectKey="" Visible="False" Index="99" IsNewNode="True" />
+          <Item Id="Event_ListView" Index="99" ViewId="Event_ListView" ObjectKey="" Visible="False" IsNewNode="True" />
+          <Item Id="TestCaseAttach_ListView" ViewId="TestCaseAttach_ListView" ObjectKey="" Visible="False" Index="99" IsNewNode="True" />
+          <Item Id="TestRunResult_ListView" ViewId="TestRunResult_ListView" ObjectKey="" Visible="False" Index="99" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Default" Caption="Base" ImageName="PropertiesPanel">
+        <Items>
+          <Item Id="AutomationType_ListView" ImageName="ShowAllValue" Index="0" />
+          <Item Id="MyScheduler_ListView" Index="0" Removed="True" />
+          <Item Id="TestCaseType_ListView" ViewId="TestCaseType_ListView" ObjectKey="" Index="1" IsNewNode="True" Removed="True" />
+          <Item Id="MyUser_ListView" Index="3" />
+          <Item Id="Event_ListView" Visible="False" Index="99" Removed="True" />
+          <Item Id="CaseStep_ListView" Removed="True" />
+          <Item Id="Milestone_ListView" Removed="True" />
+          <Item Id="Project_ListView" Removed="True" />
+          <Item Id="RunResult_ListView" Visible="False" />
+          <Item Id="TestCase_ListView" Removed="True" />
+          <Item Id="TestCaseAssignRunResultNP_ListView" Visible="False" />
+          <Item Id="TestCaseAttach_ListView" Removed="True" />
+          <Item Id="TestPlan_ListView" Removed="True" />
+          <Item Id="TestRun_ListView" Removed="True" />
+          <Item Id="TestRunResult_ListView" Removed="True" />
+          <Item Id="UserAssignRunResultNP_ListView" Visible="False" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options>
+    <Dashboards EnableCreation="False" EnableCustomization="False" />
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="20.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="20.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="20.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="AutomationType_ListView">
+      <Columns>
+        <ColumnInfo Id="AutomationTypeId" Index="0" />
+        <ColumnInfo Id="AutomationTypeName" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="AutomationType_LookupListView">
+      <Columns>
+        <ColumnInfo Id="AutomationTypeId" PropertyName="AutomationTypeId" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="AutomationTypeName" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="AutomationType_TestCases_ListView" IsGroupPanelVisible="True">
+      <Columns>
+        <ColumnInfo Id="Owner" Index="-1" />
+        <ColumnInfo Id="TestCaseId" Index="0" />
+        <ColumnInfo Id="Name" Index="1" Width="183" />
+        <ColumnInfo Id="CreatorUser" Index="2" />
+        <ColumnInfo Id="TestCaseNodeType" Index="3" />
+        <ColumnInfo Id="Priority" Index="4" />
+        <ColumnInfo Id="Reference" Index="5" />
+        <ColumnInfo Id="EstimateTime" Index="6" />
+        <ColumnInfo Id="TestCaseType" Index="7" />
+        <ColumnInfo Id="Project" Index="8" SortOrder="Ascending" GroupIndex="0" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CaseStep_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="28.349514563106798">
+            <LayoutGroup Id="CaseStep" RelativeSize="40.410958904109592">
+              <LayoutItem Id="StepId" RelativeSize="54.237288135593218" />
+              <LayoutItem Id="PreCondition" RelativeSize="45.762711864406782" />
+            </LayoutGroup>
+            <LayoutGroup Id="MyAttachment" RelativeSize="59.589041095890408" Caption="File">
+              <LayoutItem Id="StepDescription" ViewItem="StepDescription" Index="0" RelativeSize="65.517241379310349" IsNewNode="True" />
+              <LayoutItem Id="File" Index="1" RelativeSize="34.482758620689658" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" RelativeSize="71.6504854368932">
+            <LayoutItem Id="StepExceptedResult" ViewItem="StepExceptedResult" Index="0" RelativeSize="100" IsNewNode="True" Removed="True" />
+            <LayoutItem Id="StepDescription" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CaseStep_ListView">
+      <Columns>
+        <ColumnInfo Id="StepDescription" Index="2" />
+        <ColumnInfo Id="StepExceptedResult" Index="3" />
+        <ColumnInfo Id="TestCase" Index="4" />
+        <ColumnInfo Id="File" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="CaseStep_LookupListView">
+      <Columns>
+        <ColumnInfo Id="DocumentType" Index="-1" />
+        <ColumnInfo Id="StepDescription" Index="2" />
+        <ColumnInfo Id="StepExceptedResult" Index="3" />
+        <ColumnInfo Id="File" Index="4" />
+        <ColumnInfo Id="TestCase" Index="5" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Milestone_DetailView">
+      <Items>
+        <PropertyEditor Id="DocumentType" Removed="True" />
+        <PropertyEditor Id="Oid" Removed="True" />
+        <PropertyEditor Id="TestRuns" PropertyName="TestRuns" View="Milestone_TestRuns_ListView" IsNewNode="True" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="66.601941747572809">
+            <LayoutGroup Id="Milestone" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="Autobd637363-922b-47f8-97b3-e1415ca62ffe" ShowCaption="False" Caption="Autobd637363-922b-47f8-97b3-e1415ca62ffe(4)" Direction="Horizontal" Index="0" RelativeSize="44.078947368421055" IsNewNode="True">
+                <LayoutGroup Id="Milestone_col1" ShowCaption="False" Index="0" RelativeSize="49.826388888888886" IsNewNode="True">
+                  <LayoutItem Id="MilestoneId" ViewItem="MilestoneId" Index="0" RelativeSize="23.880597014925375" IsNewNode="True" />
+                  <LayoutItem Id="MilestoneName" ViewItem="MilestoneName" Index="1" RelativeSize="17.910447761194028" IsNewNode="True" />
+                  <LayoutItem Id="MilestoneStartTime" ViewItem="MilestoneStartTime" Index="2" RelativeSize="17.910447761194028" IsNewNode="True" />
+                  <LayoutItem Id="MilestoneEndTime" ViewItem="MilestoneEndTime" Index="3" RelativeSize="40.298507462686565" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Milestone_col2" ShowCaption="False" Index="1" RelativeSize="50.173611111111114" IsNewNode="True">
+                  <LayoutItem Id="Project" ViewItem="Project" Index="0" RelativeSize="23.880597014925375" IsNewNode="True" />
+                  <LayoutItem Id="MilestoneStatus" ViewItem="MilestoneStatus" Index="1" RelativeSize="17.910447761194028" IsNewNode="True" />
+                  <LayoutItem Id="MilestonePercent" ViewItem="MilestonePercent" Index="2" RelativeSize="17.910447761194028" IsNewNode="True" />
+                  <LayoutItem Id="MilestoneReference" ViewItem="MilestoneReference" Index="3" RelativeSize="17.910447761194028" IsNewNode="True" />
+                  <LayoutItem Id="File" ViewItem="File" Index="4" RelativeSize="22.388059701492537" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="MilestoneDescription" ViewItem="MilestoneDescription" Index="1" RelativeSize="55.921052631578945" IsNewNode="True" />
+              <LayoutGroup Id="Milestone_col1" RelativeSize="49.9236641221374" Removed="True">
+                <LayoutItem Id="MilestoneStartTime" RelativeSize="17.647058823529413" Index="2" />
+                <LayoutItem Id="MilestoneEndTime" ViewItem="MilestoneEndTime" Index="3" RelativeSize="41.1764705882353" IsNewNode="True" />
+                <LayoutItem Id="MilestoneId" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="MilestoneName" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="MilestoneReference" RelativeSize="21.428571428571427" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Milestone_col2" RelativeSize="50.0763358778626" Removed="True">
+                <LayoutItem Id="Project" Index="0" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="MilestoneStatus" RelativeSize="17.647058823529413" Index="1" />
+                <LayoutItem Id="MilestoneEndTime" Index="2" RelativeSize="17.647058823529413" Removed="True" />
+                <LayoutItem Id="MilestonePercent" RelativeSize="17.647058823529413" Index="2" />
+                <LayoutItem Id="MilestoneReference" ViewItem="MilestoneReference" Index="3" RelativeSize="17.647058823529413" IsNewNode="True" />
+                <LayoutItem Id="File" ViewItem="File" Index="4" RelativeSize="23.529411764705884" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="MyAttachment" RelativeSize="6.666666666666667" Caption="File" Removed="True">
+              <LayoutItem Id="File" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Index="1" RelativeSize="33.398058252427184">
+            <LayoutGroup Id="TestRuns" Direction="Vertical" RelativeSize="100" Caption="Test Run">
+              <LayoutItem Id="TestRuns" ViewItem="TestRuns" Index="0" RelativeSize="100" IsNewNode="True" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="TestPlans" RelativeSize="100">
+              <LayoutItem Id="TestPlans" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="55.728155339805824" Caption="Description" Removed="True">
+            <LayoutItem Id="MilestoneDescription" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Milestone_ListView" IsGroupPanelVisible="True" MasterDetailMode="ListViewOnly">
+      <Columns>
+        <ColumnInfo Id="MilestoneId" Index="0" />
+        <ColumnInfo Id="MilestoneName" Index="1" Width="174" />
+        <ColumnInfo Id="MilestoneStartTime" Index="2" />
+        <ColumnInfo Id="MilestoneEndTime" Index="3" />
+        <ColumnInfo Id="MilestoneReference" Index="4" />
+        <ColumnInfo Id="MilestonePercent" Index="5" />
+        <ColumnInfo Id="Project" SortOrder="Ascending" GroupIndex="0" Index="6" />
+        <ColumnInfo Id="MilestoneStatus" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="Milestone_LookupListView">
+      <Columns>
+        <ColumnInfo Id="MilestoneId" PropertyName="MilestoneId" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="MilestoneName" Index="1" />
+        <ColumnInfo Id="Project" PropertyName="Project" Index="2" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="Milestone_TestPlans_ListView">
+      <Columns>
+        <ColumnInfo Id="TestPlanName" Width="231" Index="0" />
+        <ColumnInfo Id="TestPlanCreateTime" Index="1" />
+        <ColumnInfo Id="TestPlanCreator" Index="2" />
+        <ColumnInfo Id="RunStatus" Index="3" />
+        <ColumnInfo Id="TestRunPercent" Index="4" />
+      </Columns>
+    </ListView>
+    <ListView Id="Milestone_TestRuns_ListView">
+      <Columns>
+        <ColumnInfo Id="TestRunId" Index="0" />
+        <ColumnInfo Id="TestRunName" Index="1" Width="161" />
+        <ColumnInfo Id="RunCreateTime" Index="2" />
+        <ColumnInfo Id="RunEstimateTime" Index="3" />
+        <ColumnInfo Id="RunExecuteTime" Index="4" />
+        <ColumnInfo Id="RunCreator" Index="5" />
+        <ColumnInfo Id="RunStatus" Index="6" />
+        <ColumnInfo Id="TestRunPercent" Index="7" />
+        <ColumnInfo Id="AutomaticAddTestRunResult" Index="8" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MyScheduler_DetailView">
+      <Items>
+        <PropertyEditor Id="AlarmTime" PropertyName="AlarmTime" IsNewNode="True" Removed="True" />
+        <PropertyEditor Id="IsPostponed" PropertyName="IsPostponed" IsNewNode="True" Removed="True" />
+        <PropertyEditor Id="NotificationMessage" PropertyName="NotificationMessage" IsNewNode="True" Removed="True" />
+        <PropertyEditor Id="Oid" Removed="True" />
+        <PropertyEditor Id="ReminderTime" PropertyName="ReminderTime" IsNewNode="True" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <TabbedGroup Id="Item1" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Event" ShowCaption="True" Direction="Vertical" Index="0" RelativeSize="100" Caption="Event" IsNewNode="True">
+                <LayoutGroup Id="Auto98cc93a3-76de-4746-af6a-a3e29811074b" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="23.504273504273506" IsNewNode="True">
+                  <LayoutGroup Id="Event_col1" ShowCaption="False" Index="0" RelativeSize="49.826388888888886" IsNewNode="True">
+                    <LayoutItem Id="Subject" ViewItem="Subject" Index="0" RelativeSize="29.09090909090909" IsNewNode="True" />
+                    <LayoutItem Id="StartOn" ViewItem="StartOn" Index="1" RelativeSize="21.818181818181817" IsNewNode="True" />
+                    <LayoutItem Id="EndOn" ViewItem="EndOn" Index="2" RelativeSize="21.818181818181817" IsNewNode="True" />
+                    <LayoutItem Id="AllDay" ViewItem="AllDay" Index="3" RelativeSize="27.272727272727273" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Event_col2" ShowCaption="False" Index="1" RelativeSize="50.173611111111114" IsNewNode="True">
+                    <LayoutItem Id="Location" ViewItem="Location" Index="0" RelativeSize="29.09090909090909" IsNewNode="True" />
+                    <LayoutItem Id="Label" ViewItem="Label" Index="1" RelativeSize="21.818181818181817" IsNewNode="True" />
+                    <LayoutItem Id="Status" ViewItem="Status" Index="2" RelativeSize="21.818181818181817" IsNewNode="True" />
+                    <LayoutItem Id="RecurrencePattern" ViewItem="RecurrencePattern" Index="3" RelativeSize="27.272727272727273" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="Description" ViewItem="Description" Index="1" RelativeSize="13.034188034188034" IsNewNode="True" />
+                <LayoutGroup Id="Resources_Group" ShowCaption="True" Caption="Resources" Index="2" RelativeSize="63.46153846153846" IsNewNode="True">
+                  <LayoutItem Id="Resources" ViewItem="Resources" Index="0" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" Caption="Reminder" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="ReminderTime" ViewItem="ReminderTime" Index="0" RelativeSize="6.8376068376068373" IsNewNode="True" />
+                <LayoutItem Id="AlarmTime" ViewItem="AlarmTime" Index="1" RelativeSize="5.1282051282051286" IsNewNode="True" />
+                <LayoutItem Id="IsPostponed" ViewItem="IsPostponed" Index="2" RelativeSize="5.1282051282051286" IsNewNode="True" />
+                <LayoutItem Id="NotificationMessage" ViewItem="NotificationMessage" Index="3" RelativeSize="82.90598290598291" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Direction="Horizontal" Index="2" Caption="Google" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="Auto57af7d78-3c6a-44d9-bd8a-7740544a4326" ShowCaption="False" Caption="" Index="0" RelativeSize="49.826388888888886" IsNewNode="True">
+                  <LayoutItem Id="GEventId" ViewItem="GEventId" Index="0" RelativeSize="6.8376068376068373" IsNewNode="True" />
+                  <LayoutItem Id="GCreatedTime" ViewItem="GCreatedTime" Index="1" RelativeSize="5.1282051282051286" IsNewNode="True" />
+                  <LayoutItem Id="GCreatedRaw" ViewItem="GCreatedRaw" Index="2" RelativeSize="5.1282051282051286" IsNewNode="True" />
+                  <LayoutItem Id="UpdateDateTime" ViewItem="UpdateDateTime" Index="3" RelativeSize="82.90598290598291" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autoecce4bc0-4620-4143-bed0-5a4e92de2092" ShowCaption="False" Caption="" Index="1" RelativeSize="50.173611111111114" IsNewNode="True">
+                  <LayoutItem Id="GKind" ViewItem="GKind" Index="0" RelativeSize="6.8376068376068373" IsNewNode="True" />
+                  <LayoutItem Id="OwnerEmail" ViewItem="OwnerEmail" Index="1" RelativeSize="5.1282051282051286" IsNewNode="True" />
+                  <LayoutItem Id="GCreator" ViewItem="GCreator" Index="2" RelativeSize="5.1282051282051286" IsNewNode="True" />
+                  <LayoutItem Id="MustSync" ViewItem="MustSync" Index="3" RelativeSize="82.90598290598291" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="Event" RelativeSize="48.109965635738831" Removed="True">
+              <LayoutGroup Id="Event_col1" RelativeSize="49.910554561717355">
+                <LayoutItem Id="AllDay" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="EndOn" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="StartOn" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="Subject" RelativeSize="28.571428571428573" />
+              </LayoutGroup>
+              <LayoutGroup Id="Event_col2" RelativeSize="50.089445438282645">
+                <LayoutItem Id="Label" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="Location" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="RecurrencePattern" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="Status" RelativeSize="21.428571428571427" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="MyScheduler" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Resources_Group" Direction="Vertical" RelativeSize="47.378640776699029" Index="1" Removed="True">
+            <LayoutItem Id="Resources" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="22.524271844660195" Caption="SizeableEditors" Removed="True">
+            <LayoutItem Id="RecurrenceInfoXml" RelativeSize="100" Index="0" Removed="True" />
+            <LayoutItem Id="Description" RelativeSize="48.9010989010989" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="MyUser_CreatedRuns_ListView">
+      <Columns>
+        <ColumnInfo Id="AutomaticAddTestRunResult" Index="-1" />
+        <ColumnInfo Id="TestPlan" Index="-1" />
+        <ColumnInfo Id="TestRunId" Index="0" />
+        <ColumnInfo Id="RunCreateTime" Index="1" />
+        <ColumnInfo Id="TestRunName" Index="2" Width="178" />
+        <ColumnInfo Id="Milestone" Index="3" />
+        <ColumnInfo Id="RunEstimateTime" Index="4" />
+        <ColumnInfo Id="RunExecuteTime" Index="5" />
+        <ColumnInfo Id="RunStatus" Index="6" />
+        <ColumnInfo Id="TestRunPercent" Index="7" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MyUser_DetailView">
+      <Items>
+        <PropertyEditor Id="Oid" Removed="True" />
+        <PropertyEditor Id="RunResults" PropertyName="RunResults" View="MyUser_RunResults_ListView" IsNewNode="True" Removed="True" />
+        <PropertyEditor Id="TestPlans" PropertyName="TestPlans" View="MyUser_TestPlans_ListView" IsNewNode="True" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="MyUser" Caption="MyUser" RelativeSize="100">
+              <TabbedGroup Id="Item2" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="Item1" ShowCaption="True" Caption="User" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="UserName" ViewItem="UserName" Index="0" RelativeSize="6.8376068376068373" IsNewNode="True" />
+                  <LayoutItem Id="Email" ViewItem="Email" Index="1" RelativeSize="5.1282051282051286" IsNewNode="True" />
+                  <LayoutGroup Id="Auto002c9eae-d731-4c2a-bc1b-bcaaacc1da9b" ShowCaption="False" Caption="Auto002c9eae-d731-4c2a-bc1b-bcaaacc1da9b(8)" Direction="Horizontal" Index="2" RelativeSize="7.6923076923076925" IsNewNode="True">
+                    <LayoutItem Id="IsActive" ViewItem="IsActive" Index="0" RelativeSize="46.875" IsNewNode="True" />
+                    <LayoutItem Id="ChangePasswordOnFirstLogon" ViewItem="ChangePasswordOnFirstLogon" Index="1" RelativeSize="53.125" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Roles" ShowCaption="True" Index="3" RelativeSize="80.341880341880341" IsNewNode="True">
+                    <LayoutItem Id="Roles" ViewItem="Roles" Index="0" RelativeSize="100" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" Caption="Related To User" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="Project" ViewItem="Project" Index="0" RelativeSize="6.8376068376068373" IsNewNode="True" />
+                  <TabbedGroup Id="Tabs" Index="1" RelativeSize="93.162393162393158" IsNewNode="True">
+                    <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="0" RelativeSize="100" Caption="Created Plans" IsNewNode="True">
+                      <LayoutItem Id="TestPlans" ViewItem="TestPlans" Index="0" RelativeSize="100" IsNewNode="True" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Runs" ShowCaption="True" Index="1" RelativeSize="100" Direction="Vertical" Caption="Run Results" IsNewNode="True">
+                      <LayoutItem Id="RunResults" ViewItem="RunResults" Index="0" RelativeSize="100" IsNewNode="True" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="CreatedRuns" ShowCaption="True" Caption="Created Runs" Index="2" RelativeSize="100" IsNewNode="True">
+                      <LayoutItem Id="CreatedRuns" ViewItem="CreatedRuns" Index="0" RelativeSize="100" IsNewNode="True" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="TestCases" ShowCaption="True" Index="3" RelativeSize="100" IsNewNode="True">
+                      <LayoutItem Id="TestCases" ViewItem="TestCases" Index="0" RelativeSize="100" IsNewNode="True" />
+                    </LayoutGroup>
+                  </TabbedGroup>
+                </LayoutGroup>
+              </TabbedGroup>
+              <LayoutItem Id="Email" Removed="True" />
+              <LayoutItem Id="Project" RelativeSize="10.830324909747292" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="PermissionPolicyUser" RelativeSize="16.574585635359117" Caption="PermissionPolicyUser" Removed="True">
+              <LayoutItem Id="IsActive" RelativeSize="100" Index="0" Removed="True" />
+              <LayoutItem Id="UserName" RelativeSize="47.368421052631582" Index="0" Removed="True" />
+              <LayoutItem Id="ChangePasswordOnFirstLogon" RelativeSize="33.333333333333336" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="50.873786407766993" Removed="True">
+            <LayoutGroup Id="Roles" RelativeSize="100" Index="0" Removed="True">
+              <LayoutItem Id="Roles" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Runs" RelativeSize="100" Index="0">
+              <LayoutItem Id="Runs" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="CreatedRuns" RelativeSize="100" Index="1">
+              <LayoutItem Id="CreatedRuns" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="TestCases" RelativeSize="100" Index="2">
+              <LayoutItem Id="TestCases" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="MyUser_ListView" MasterDetailMode="ListViewOnly" />
+    <ListView Id="MyUser_TestCases_ListView" IsGroupPanelVisible="True">
+      <Columns>
+        <ColumnInfo Id="Owner" Index="-1" Width="87" />
+        <ColumnInfo Id="TestCaseId" Index="0" />
+        <ColumnInfo Id="Name" Index="1" Width="166" />
+        <ColumnInfo Id="EstimateTime" Index="2" />
+        <ColumnInfo Id="TestCaseNodeType" Index="3" />
+        <ColumnInfo Id="Priority" Index="4" />
+        <ColumnInfo Id="Reference" Index="5" />
+        <ColumnInfo Id="TestCaseType" Index="6" />
+        <ColumnInfo Id="AutomationType" Index="7" />
+        <ColumnInfo Id="Project" Index="8" SortOrder="Ascending" GroupIndex="0" />
+      </Columns>
+    </ListView>
+    <ListView Id="PermissionPolicyUser_Roles_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Width="361" />
+        <ColumnInfo Id="IsAdministrative" Width="86" />
+        <ColumnInfo Id="CanEditModel" Width="117" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Project_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="52.233009708737868">
+            <LayoutGroup Id="Project" RelativeSize="100">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Base Information" IsNewNode="True">
+                <LayoutItem Id="ProjectId" ViewItem="ProjectId" Index="0" RelativeSize="13.913043478260869" IsNewNode="True" />
+                <LayoutItem Id="ProjectName" ViewItem="ProjectName" Index="1" RelativeSize="10.434782608695652" IsNewNode="True" />
+                <LayoutItem Id="ProjectReference" ViewItem="ProjectReference" Index="2" RelativeSize="10.434782608695652" IsNewNode="True" />
+                <LayoutItem Id="File" ViewItem="File" Index="3" RelativeSize="10.434782608695652" IsNewNode="True" />
+                <LayoutItem Id="ProjectDescription" ViewItem="ProjectDescription" Index="4" RelativeSize="54.782608695652172" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="ProjectId" Removed="True" />
+              <LayoutItem Id="ProjectName" Removed="True" />
+              <LayoutItem Id="ProjectReference" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="MyAttachment" RelativeSize="14.851485148514852" Caption="File" Removed="True">
+              <LayoutItem Id="File" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="47.766990291262132" Index="1">
+            <LayoutGroup Id="ProjectUsers" RelativeSize="100">
+              <LayoutItem Id="ProjectUsers" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="TestCases" RelativeSize="100">
+              <LayoutItem Id="TestCases" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="25.242718446601941" Caption="Description" Removed="True">
+            <LayoutItem Id="ProjectDescription" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Project_ListView" MasterDetailMode="ListViewOnly">
+      <Columns>
+        <ColumnInfo Id="ProjectId" Index="0" />
+        <ColumnInfo Id="ProjectName" Index="1" Width="191" />
+        <ColumnInfo Id="ProjectDescription" Index="2" Width="136" />
+        <ColumnInfo Id="ProjectReference" Index="3" Width="94" />
+        <ColumnInfo Id="File" Index="4" Width="192" />
+      </Columns>
+    </ListView>
+    <ListView Id="Project_LookupListView">
+      <Columns>
+        <ColumnInfo Id="ProjectId" PropertyName="ProjectId" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="ProjectName" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Project_ProjectUsers_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Width="308" />
+        <ColumnInfo Id="Email" Width="160" />
+      </Columns>
+    </ListView>
+    <ListView Id="Project_TestCases_ListView">
+      <Columns>
+        <ColumnInfo Id="Owner" Index="-1" />
+        <ColumnInfo Id="TestCaseId" Index="0" />
+        <ColumnInfo Id="Name" Width="198" Index="1" />
+        <ColumnInfo Id="EstimateTime" Index="2" />
+        <ColumnInfo Id="CreatorUser" Index="3" />
+        <ColumnInfo Id="TestCaseNodeType" Index="4" />
+        <ColumnInfo Id="TestCaseType" Index="5" />
+        <ColumnInfo Id="AutomationType" Index="6" />
+        <ColumnInfo Id="Priority" Index="7" />
+        <ColumnInfo Id="Reference" Index="8" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RunResult_DetailView">
+      <Items>
+        <PropertyEditor Id="RunAssigned" PropertyName="RunAssigned" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="28.737864077669904">
+            <LayoutGroup Id="RunResult" RelativeSize="100">
+              <LayoutGroup Id="RunResult_col1" RelativeSize="50">
+                <LayoutItem Id="RunAssigned" ViewItem="RunAssigned" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                <LayoutItem Id="Version" Index="1" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="Defects" Index="2" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="CreateDateTime" ViewItem="CreateDateTime" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+                <LayoutItem Id="RunStatus" Index="3" RelativeSize="28.571428571428573" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="RunResult_col2" RelativeSize="50">
+                <LayoutItem Id="ElapsedDay" RelativeSize="28.571428571428573" Index="0" />
+                <LayoutItem Id="ElapsedTime" RelativeSize="21.428571428571427" Index="1" />
+                <LayoutItem Id="RunStatus" ViewItem="RunStatus" Index="2" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="CreateDateTime" RelativeSize="28.571428571428573" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="71.2621359223301">
+            <LayoutItem Id="Comment" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestCase_CaseSteps_ListView">
+      <Columns>
+        <ColumnInfo Id="PreCondition" Width="0" />
+        <ColumnInfo Id="StepDescription" Index="2" Width="92" />
+        <ColumnInfo Id="StepExceptedResult" Index="3" Width="93" />
+        <ColumnInfo Id="File" Index="4" Width="148" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestCase_DetailView">
+      <Items>
+        <PropertyEditor Id="AutomationType" PropertyName="AutomationType" IsNewNode="True" />
+        <PropertyEditor Id="CreatorUser" PropertyName="CreatorUser" IsNewNode="True" />
+        <PropertyEditor Id="TestCaseType" PropertyName="TestCaseType" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="38.640776699029125">
+            <LayoutGroup Id="TestCase" RelativeSize="100" Caption="Base Information">
+              <LayoutGroup Id="TestCase_col1" RelativeSize="49.652777777777779">
+                <LayoutItem Id="TestCaseNodeType" ViewItem="TestCaseNodeType" Index="0" RelativeSize="20" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="TestCaseId" Index="1" RelativeSize="15" />
+                <LayoutItem Id="Name" ViewItem="Name" Index="2" RelativeSize="45" IsNewNode="True" />
+                <LayoutItem Id="Owner" Index="3" RelativeSize="20" />
+              </LayoutGroup>
+              <LayoutGroup Id="TestCase_col2" RelativeSize="50.347222222222221">
+                <LayoutItem Id="AutomationType" ViewItem="AutomationType" Index="0" RelativeSize="20" IsNewNode="True" />
+                <LayoutItem Id="TestCaseType" ViewItem="TestCaseType" Index="1" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="EstimateTime" RelativeSize="15" Index="2" />
+                <LayoutItem Id="Reference" RelativeSize="15" Index="3" />
+                <LayoutItem Id="Project" RelativeSize="15" Index="4" />
+                <LayoutItem Id="Priority" Index="5" RelativeSize="20" ViewItem="Priority" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="61.359223300970875" Index="1">
+            <LayoutGroup Id="CaseSteps" RelativeSize="100" Index="0">
+              <LayoutItem Id="CaseSteps" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="TestCaseAttachs" RelativeSize="100" Index="1">
+              <LayoutItem Id="TestCaseAttachs" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="TestRunResults" RelativeSize="100" Index="2">
+              <LayoutItem Id="TestRunResults" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Nodes" RelativeSize="100" Index="3" Removed="True">
+              <LayoutItem Id="Nodes" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="30.097087378640776" Caption="Name" Removed="True">
+            <LayoutItem Id="Name" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestCase_ListView" MasterDetailMode="ListViewOnly">
+      <Columns>
+        <ColumnInfo Id="Owner" Index="-1" />
+        <ColumnInfo Id="TestCaseNodeType" Index="0" />
+        <ColumnInfo Id="TestCaseId" Index="1" />
+        <ColumnInfo Id="Name" Index="2" Width="170" />
+        <ColumnInfo Id="CreatorUser" Index="3" />
+        <ColumnInfo Id="EstimateTime" Index="4" />
+        <ColumnInfo Id="TestCaseType" Index="5" />
+        <ColumnInfo Id="AutomationType" Index="6" />
+        <ColumnInfo Id="Priority" Index="7" />
+        <ColumnInfo Id="Reference" Index="8" />
+        <ColumnInfo Id="Project" Index="9" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestCase_LookupListView">
+      <Columns>
+        <ColumnInfo Id="TestCaseId" PropertyName="TestCaseId" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="Name" Index="1" Width="168" />
+        <ColumnInfo Id="Project" PropertyName="Project" Index="2" Width="100" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestCase_Nodes_ListView">
+      <Columns>
+        <ColumnInfo Id="TestCaseId" Index="0" />
+        <ColumnInfo Id="Name" Index="1" Width="165" />
+        <ColumnInfo Id="Owner" Index="2" />
+        <ColumnInfo Id="EstimateTime" Index="4" />
+        <ColumnInfo Id="TestCaseNodeType" Index="5" />
+        <ColumnInfo Id="TestCaseType" Index="6" />
+        <ColumnInfo Id="AutomationType" Index="7" />
+        <ColumnInfo Id="Reference" Index="8" />
+        <ColumnInfo Id="Priority" Index="9" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestCase_TestCaseAttachs_ListView">
+      <Columns>
+        <ColumnInfo Id="AttachmentDate" Index="1" Width="165" />
+        <ColumnInfo Id="TestCaseAttachDescription" Index="2" Width="114" />
+        <ColumnInfo Id="File" Index="3" Width="218" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestCase_TestRunResults_ListView">
+      <Columns>
+        <ColumnInfo Id="TestRun" Index="0" />
+        <ColumnInfo Id="Version" Index="1" />
+        <ColumnInfo Id="Comment" Index="3" />
+        <ColumnInfo Id="RunStatus" Index="4" />
+        <ColumnInfo Id="Defects" Index="5" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestCaseAttach_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="17.864077669902912">
+            <LayoutGroup Id="TestCaseAttach" RelativeSize="64.1304347826087">
+              <LayoutItem Id="TestCaseAttachId" RelativeSize="54.237288135593218" />
+              <LayoutItem Id="AttachmentDate" RelativeSize="45.762711864406782" />
+            </LayoutGroup>
+            <LayoutGroup Id="MyAttachment" Direction="Horizontal" RelativeSize="35.869565217391305" Caption="File">
+              <LayoutItem Id="DocumentType" ViewItem="DocumentType" Index="0" RelativeSize="49.925925925925924" IsNewNode="True" />
+              <LayoutItem Id="File" Index="1" RelativeSize="50.074074074074076" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="82.135922330097088">
+            <LayoutItem Id="TestCaseAttachDescription" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestCaseAttach_ListView">
+      <Columns>
+        <ColumnInfo Id="AttachmentDate" Index="1" Width="124" />
+        <ColumnInfo Id="TestCaseAttachDescription" Index="2" />
+        <ColumnInfo Id="DocumentType" Index="3" />
+        <ColumnInfo Id="File" Index="4" Width="139" />
+        <ColumnInfo Id="TestCase" Width="131" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestCaseAttach_LookupListView">
+      <Columns>
+        <ColumnInfo Id="AttachmentDate" Index="1" />
+        <ColumnInfo Id="File" Index="2" Width="183" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestCaseType_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="20">
+            <LayoutGroup Id="TestCaseType" RelativeSize="100">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Test Case Type" IsNewNode="True">
+                <LayoutItem Id="TestCaseTypeId" ViewItem="TestCaseTypeId" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="TestCaseTypeName" ViewItem="TestCaseTypeName" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="TestCaseTypeId" Removed="True" />
+              <LayoutItem Id="TestCaseTypeName" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="TestCases_Group" Direction="Vertical" RelativeSize="80">
+            <LayoutItem Id="TestCases" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestCaseType_ListView">
+      <Columns>
+        <ColumnInfo Id="TestCaseTypeId" Index="0" />
+        <ColumnInfo Id="TestCaseTypeName" Index="1" Width="208" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestCaseType_LookupListView">
+      <Columns>
+        <ColumnInfo Id="TestCaseTypeId" PropertyName="TestCaseTypeId" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="TestCaseTypeName" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestCaseType_TestCases_ListView">
+      <Columns>
+        <ColumnInfo Id="Owner" Index="-1" Width="87" />
+        <ColumnInfo Id="TestCaseId" Index="0" />
+        <ColumnInfo Id="Name" Index="1" Width="173" />
+        <ColumnInfo Id="CreatorUser" Index="2" />
+        <ColumnInfo Id="EstimateTime" Index="3" />
+        <ColumnInfo Id="Project" Index="4" />
+        <ColumnInfo Id="TestCaseNodeType" Index="5" />
+        <ColumnInfo Id="TestCaseType" Index="6" />
+        <ColumnInfo Id="AutomationType" Index="7" />
+        <ColumnInfo Id="Priority" Index="8" />
+        <ColumnInfo Id="Reference" Index="9" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestPlan_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="24.660194174757283">
+            <LayoutGroup Id="TestPlan" RelativeSize="100">
+              <LayoutGroup Id="TestPlan_col1" RelativeSize="50">
+                <LayoutItem Id="TestPlanName" RelativeSize="36.363636363636367" />
+                <LayoutItem Id="Milestone" ViewItem="Milestone" Index="1" RelativeSize="63.636363636363633" IsNewNode="True" />
+                <LayoutItem Id="RunStatus" Index="2" RelativeSize="21.428571428571427" Removed="True" />
+                <LayoutItem Id="TestRunPercent" Index="2" RelativeSize="36.363636363636367" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="TestPlan_col2" Caption="TestPlan_col2" RelativeSize="50" Direction="Vertical">
+                <LayoutItem Id="TestPlanCreateTime" RelativeSize="36.363636363636367" Index="0" />
+                <LayoutItem Id="TestRunPercent" ViewItem="TestRunPercent" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
+                <LayoutItem Id="RunStatus" ViewItem="RunStatus" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" />
+                <LayoutItem Id="Milestone" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="TestRuns_Group" Direction="Vertical" RelativeSize="75.339805825242721">
+            <LayoutItem Id="TestRuns" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestPlan_TestRuns_ListView">
+      <Columns>
+        <ColumnInfo Id="TestRunId" Index="0" />
+        <ColumnInfo Id="TestRunName" Width="125" Index="1" />
+        <ColumnInfo Id="Milestone" Index="2" />
+        <ColumnInfo Id="RunCreateTime" Index="3" />
+        <ColumnInfo Id="RunEstimateTime" Index="4" />
+        <ColumnInfo Id="RunExecuteTime" Index="5" />
+        <ColumnInfo Id="RunCreator" Index="6" />
+        <ColumnInfo Id="AutomaticAddTestRunResult" Index="7" />
+        <ColumnInfo Id="RunStatus" Index="8" />
+        <ColumnInfo Id="TestRunPercent" Index="9" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestRun_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="33.980582524271846">
+            <LayoutGroup Id="TestRun" RelativeSize="100" Caption="Base Information">
+              <LayoutGroup Id="TestRun_col1" RelativeSize="49.826388888888886">
+                <LayoutItem Id="TestRunId" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="TestRunName" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="RunCreateTime" Index="2" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Milestone" ViewItem="Milestone" Index="3" RelativeSize="17.647058823529413" IsNewNode="True" />
+                <LayoutItem Id="AutomaticAddTestRunResult" ViewItem="AutomaticAddTestRunResult" Index="4" RelativeSize="23.529411764705884" IsNewNode="True" />
+                <LayoutItem Id="RunStatus" RelativeSize="15" Index="4" Removed="True" />
+                <LayoutItem Id="TestRunPercent" RelativeSize="23.529411764705884" Index="4" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="TestRun_col2" RelativeSize="50.173611111111114">
+                <LayoutItem Id="RunExecuteTime" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="RunEstimateTime" RelativeSize="17.647058823529413" Index="1" />
+                <LayoutItem Id="RunStatus" ViewItem="RunStatus" Index="2" RelativeSize="17.647058823529413" IsNewNode="True" />
+                <LayoutItem Id="TestRunPercent" ViewItem="TestRunPercent" Index="3" RelativeSize="41.1764705882353" IsNewNode="True" />
+                <LayoutItem Id="AutomaticAddTestRunResult" RelativeSize="17.647058823529413" Removed="True" />
+                <LayoutItem Id="Milestone" RelativeSize="41.1764705882353" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="TestRunResults_Group" Direction="Vertical" RelativeSize="66.019417475728162">
+            <LayoutItem Id="TestRunResults" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestRun_ListView" MasterDetailMode="ListViewOnly">
+      <Columns>
+        <ColumnInfo Id="TestRunId" Index="0" />
+        <ColumnInfo Id="TestRunName" Index="1" Width="172" />
+        <ColumnInfo Id="RunCreateTime" Index="2" />
+        <ColumnInfo Id="RunEstimateTime" Index="3" />
+        <ColumnInfo Id="RunExecuteTime" Index="4" />
+        <ColumnInfo Id="RunCreator" Index="5" />
+        <ColumnInfo Id="RunStatus" Index="6" />
+        <ColumnInfo Id="TestRunPercent" Index="7" />
+        <ColumnInfo Id="AutomaticAddTestRunResult" Index="8" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestRun_LookupListView">
+      <Columns>
+        <ColumnInfo Id="TestRunId" PropertyName="TestRunId" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="TestRunName" Index="1" Width="269" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestRun_TestRunResults_ListView">
+      <Columns>
+        <ColumnInfo Id="TestCase" Index="0" />
+        <ColumnInfo Id="RunAssigned" Index="1" />
+        <ColumnInfo Id="Version" Index="2" />
+        <ColumnInfo Id="Comment" Index="3" />
+        <ColumnInfo Id="Defects" Index="4" />
+        <ColumnInfo Id="ElapsedDay" Index="5" />
+        <ColumnInfo Id="ElapsedTime" Index="6" />
+        <ColumnInfo Id="RunStatus" Index="7" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestRunResult_DetailView">
+      <Items>
+        <PropertyEditor Id="RunAssigned" PropertyName="RunAssigned" View="" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="35.145631067961162">
+            <LayoutGroup Id="TestRunResult" RelativeSize="100" Direction="Horizontal">
+              <LayoutGroup Id="Auto738dd40c-8741-4159-b7b1-3de48bb70474" ShowCaption="False" Caption="Auto738dd40c-8741-4159-b7b1-3de48bb70474(4)" Index="0" RelativeSize="43.055555555555557" IsNewNode="True">
+                <LayoutGroup Id="Autoe0984593-a1e0-4fe4-9208-cb678fd5d3c1" ShowCaption="False" Caption="Autoe0984593-a1e0-4fe4-9208-cb678fd5d3c1(4)" Index="0" RelativeSize="43.661971830985912" IsNewNode="True">
+                  <LayoutGroup Id="TestRunResult_col1" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                    <LayoutItem Id="TestCase" ViewItem="TestCase" Index="0" RelativeSize="51.612903225806448" IsNewNode="True" />
+                    <LayoutItem Id="Version" ViewItem="Version" Index="1" RelativeSize="48.387096774193552" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="RunAssigned" ViewItem="RunAssigned" Index="1" RelativeSize="16.901408450704224" IsNewNode="True" />
+                <LayoutItem Id="ElapsedDay" ViewItem="ElapsedDay" Index="2" RelativeSize="16.901408450704224" IsNewNode="True" />
+                <LayoutItem Id="ElapsedTime" ViewItem="ElapsedTime" Index="3" RelativeSize="22.535211267605632" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Autod39e2eea-d11d-47b8-a95c-f7341fabc585" ShowCaption="False" Caption="" Index="1" RelativeSize="56.944444444444443" IsNewNode="True">
+                <LayoutItem Id="Defects" ViewItem="Defects" Index="0" RelativeSize="22.535211267605632" IsNewNode="True" />
+                <LayoutItem Id="Comment" ViewItem="Comment" Index="1" RelativeSize="54.929577464788736" IsNewNode="True" />
+                <LayoutItem Id="RunStatus" ViewItem="RunStatus" Index="2" RelativeSize="22.535211267605632" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="TestRunResult_col1" RelativeSize="49.923430321592647" Removed="True">
+                <LayoutItem Id="Defects" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="RunStatus" RelativeSize="36.363636363636367" />
+                <LayoutItem Id="Version" RelativeSize="36.363636363636367" />
+              </LayoutGroup>
+              <LayoutGroup Id="TestRunResult_col2" RelativeSize="50.076569678407353" Removed="True">
+                <LayoutItem Id="Elapsed" RelativeSize="36.363636363636367" />
+                <LayoutItem Id="TestCase" RelativeSize="63.636363636363633" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="RunResults_Group" Direction="Vertical" Index="1" RelativeSize="64.854368932038838">
+            <LayoutItem Id="RunResults" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Comment" RelativeSize="64.854368932038838" Removed="True">
+            <LayoutItem Id="Comment" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestRunResult_ListView">
+      <Columns>
+        <ColumnInfo Id="TestRun" Index="0" />
+        <ColumnInfo Id="TestCase" Index="1" />
+        <ColumnInfo Id="Version" Index="2" />
+        <ColumnInfo Id="Comment" Index="4" />
+        <ColumnInfo Id="Defects" Index="5" />
+        <ColumnInfo Id="RunStatus" Index="6" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestRunResult_LookupListView">
+      <Columns>
+        <ColumnInfo Id="TestRun" Index="0" />
+        <ColumnInfo Id="TestCase" Index="1" />
+        <ColumnInfo Id="Version" Index="2" />
+        <ColumnInfo Id="Defects" Index="4" />
+        <ColumnInfo Id="RunStatus" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestRunResult_RunResults_ListView">
+      <Columns>
+        <ColumnInfo Id="Defects" Index="-1" />
+        <ColumnInfo Id="ElapsedDay" Index="-1" />
+        <ColumnInfo Id="ElapsedTime" Index="-1" />
+        <ColumnInfo Id="Version" Index="-1" />
+        <ColumnInfo Id="CreateDateTime" Index="0" Width="102" SortIndex="0" SortOrder="Descending" />
+        <ColumnInfo Id="RunAssigned" Index="1" Width="124" />
+        <ColumnInfo Id="RunStatus" Index="2" Width="98" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

@@ -1,0 +1,28 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="Default" EnableViewState="false"
+    ValidateRequest="false" CodeBehind="Default.aspx.cs" %>
+
+<%@ Register Assembly="DevExpress.ExpressApp.Web.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.ExpressApp.Web.Templates" TagPrefix="cc3" %>
+<%@ Register Assembly="DevExpress.ExpressApp.Web.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.ExpressApp.Web.Controls" TagPrefix="cc4" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Main Page</title>
+    <!-- include alertify.css -->
+    <link rel="stylesheet" href="Script/css/alertify.css" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- include alertify.css -->
+    <link rel="stylesheet" href="Script/css/alertify.css" />
+    <!-- include boostrap theme  -->
+    <link rel="stylesheet" href="Script/css/themes/bootstrap.css" />
+    <!-- include alertify script -->
+    <script src="Script/alertify.js"></script>
+</head>
+<body class="VerticalTemplate">
+    <form id="form2" runat="server">
+        <cc4:ASPxProgressControl ID="ProgressControl" runat="server" />
+        <div runat="server" id="Content" />
+    </form>
+</body>
+</html>

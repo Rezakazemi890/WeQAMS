@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options CollectionsEditMode="Edit" />
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="20.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerAspNetModule" Version="20.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="20.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemAspNetModule" Version="20.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="20.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <ViewItems>
+    <PropertyEditor Name="PropertyEditors">
+      <RegisteredPropertyEditor PropertyType="System.Drawing.Color" EditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxColorPickerPropertyEditor" />
+    </PropertyEditor>
+  </ViewItems>
+  <Views>
+    <DetailView Id="Project_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="39.805825242718448">
+            <LayoutGroup Id="Project">
+              <LayoutGroup Id="Item1" Direction="Horizontal">
+                <LayoutGroup Id="Auto0e574340-9eed-48a2-9e58-f38c0f727105" ShowCaption="False" Caption="" Index="0" RelativeSize="54.729729729729726" IsNewNode="True">
+                  <LayoutItem Id="ProjectId" ViewItem="ProjectId" Index="0" RelativeSize="19.277108433734941" IsNewNode="True" />
+                  <LayoutItem Id="ProjectName" ViewItem="ProjectName" Index="1" RelativeSize="14.457831325301205" IsNewNode="True" />
+                  <LayoutItem Id="ProjectReference" ViewItem="ProjectReference" Index="2" RelativeSize="14.457831325301205" IsNewNode="True" />
+                  <LayoutItem Id="File" ViewItem="File" Index="3" RelativeSize="14.457831325301205" IsNewNode="True" />
+                  <LayoutItem Id="ProjectDescription" ViewItem="ProjectDescription" Index="4" RelativeSize="37.349397590361448" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="CalculatedValueForChart" ViewItem="CalculatedValueForChart" Index="1" RelativeSize="45.270270270270274" IsNewNode="True" />
+                <LayoutItem Id="File" Removed="True" />
+                <LayoutItem Id="ProjectDescription" Removed="True" />
+                <LayoutItem Id="ProjectId" Removed="True" />
+                <LayoutItem Id="ProjectName" Removed="True" />
+                <LayoutItem Id="ProjectReference" Removed="True" />
+              </LayoutGroup>
+              <LayoutItem Id="CalculatedValueForChart" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="60.194174757281552" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestRun_TestRunResults_ListView" InlineEditMode="Batch" AllowEdit="True" />
+    <ListView Id="TestRunResult_ListView" AllowEdit="True" InlineEditMode="Batch" />
+  </Views>
+</Application>

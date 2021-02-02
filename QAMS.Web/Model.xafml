@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application CurrentUserDisplayMode="CaptionAndImage" Logo="ShortDate">
+  <NavigationItems ShowImages="True" StartupNavigationItem="Main Dashboard">
+    <Items>
+      <Item Id="@f4859edd-5033-47e5-8dd8-574381ba8395">
+        <Items>
+          <DashboardNavigationItem Id="Main Dashboard" Caption="Main Dashboard" DashboardTitle="Main Dashboard" Index="0" ImageName="ChartType_Bar3DStacked" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items>
+          <Item Id="PermissionPolicyRole_ListView" Index="11" />
+          <Item Id="MyDetails" Visible="False" Index="100" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options>
+    <Dashboards EnableCreation="False" EnableCustomization="False" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="20.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerAspNetModule" Version="20.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="20.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemAspNetModule" Version="20.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="20.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

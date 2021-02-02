@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="TestRun_Milestones_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MilestoneId" Index="0" />
+        <ColumnInfo Id="MilestoneName" Index="1" Width="158" />
+        <ColumnInfo Id="Project" Index="2" />
+        <ColumnInfo Id="MilestoneStartTime" Index="3" />
+        <ColumnInfo Id="MilestoneEndTime" Index="4" />
+        <ColumnInfo Id="MilestoneReference" Index="5" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestRun_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs" Index="1" RelativeSize="70.679611650485441">
+            <LayoutGroup Id="TestRunResults" RelativeSize="100" Index="0">
+              <LayoutItem Id="TestRunResults" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Milestones" RelativeSize="100" Caption="Milestone" Index="1">
+              <LayoutItem Id="Milestones" RelativeSize="100" Index="0" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TestRun">
+              <LayoutGroup Id="TestRun_col2">
+                <LayoutItem Id="RunCreateTime" RelativeSize="28.571428571428573" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestRun_TestRunResults_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Elapsed" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MyUser_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="TestRunResults" PropertyName="TestRunResults" View="MyUser_TestRunResults_ListView" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MyUser">
+              <TabbedGroup Id="Item2">
+                <LayoutGroup Id="Item3">
+                  <TabbedGroup Id="Tabs">
+                    <LayoutGroup Id="Runs">
+                      <LayoutItem Id="TestRunResults1" ViewItem="TestRunResults" />
+                    </LayoutGroup>
+                  </TabbedGroup>
+                </LayoutGroup>
+              </TabbedGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TestCase_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TestCase">
+              <LayoutGroup Id="TestCase_col1">
+                <LayoutItem Id="Priority" RelativeSize="16.842105263157894" Index="5" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestCase_TestRunResults_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Elapsed" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TestRunResult_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="RunAssigned" View="TestRunResult_RunAssigned_ListView" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TestRunResult">
+              <LayoutGroup Id="Auto738dd40c-8741-4159-b7b1-3de48bb70474">
+                <LayoutGroup Id="Autoe0984593-a1e0-4fe4-9208-cb678fd5d3c1">
+                  <LayoutGroup Id="TestRunResult_col1">
+                    <LayoutItem Id="Elapsed" ViewItem="Elapsed" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TestRunResult_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Elapsed" Index="3" />
+      </Columns>
+    </ListView>
+    <ListView Id="TestRunResult_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Elapsed" Index="3" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
