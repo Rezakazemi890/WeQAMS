@@ -466,7 +466,6 @@ namespace QAMS.Module.Web.Controllers
             };
 
 
-
             EventsResource.UpdateRequest request = service.Events.Update(newEvent, calendarId, myScheduler.GEventId);
             Event createdEvent = request.Execute();
             myScheduler.GEventId = createdEvent.Id;
