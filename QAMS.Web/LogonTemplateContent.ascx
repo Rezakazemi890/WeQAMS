@@ -64,8 +64,8 @@
                                 </xaf:XafUpdatePanel>
                             </td>
                              <%--background: url('Images/qa-automation-testing.png') no-repeat center center fixed; -webkit-background-size: inherit; -moz-background-size: inherit; -o-background-size: inherit; background-size: inherit;--%>
-                            <td style="width: 50%;height:100%;">
-                                <img src="Images/LoginRight.jpg" style="width:100% ; height:50%; resize:both" />
+                            <td style="width: 50%;height:10%;margin-right:20%; margin-left:20%;margin-top:30%;margin-bottom:30%;float:none;">
+                                <img src="Images/LoginRight.jpg" style="width:100% ; height:10%; resize:both" />
                             </td>
                         </tr>
                     </table>
