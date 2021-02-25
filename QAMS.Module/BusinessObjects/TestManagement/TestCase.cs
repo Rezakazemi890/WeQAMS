@@ -90,11 +90,19 @@ namespace QAMS.Module.BusinessObjects.TestManagement
         [XafDisplayName("Name")]
         [ToolTip("Ex: Test Run 2014-08-01, Build 240 or Version 3.0")]
         [Size(FieldSizeAttribute.Unlimited)]
-        public new String Name { get; set; }
+        public new string Name
+        {
+            get { return GetPropertyValue<string>("Name"); }
+            set { SetPropertyValue<string>("Name", value); }
+        }
 
         [XafDisplayName("Owner")]
         [DataSourceProperty("OwnerDataSourceFoTestCase")]
-        public TestCase Owner { get; set; }
+        public TestCase Owner
+        {
+            get { return GetPropertyValue<TestCase>("Owner"); }
+            set { SetPropertyValue<TestCase>("Owner", value); }
+        }
 
         private List<TestCase> _OwnerDataSourceForTestCase;
         [Browsable(false)]
