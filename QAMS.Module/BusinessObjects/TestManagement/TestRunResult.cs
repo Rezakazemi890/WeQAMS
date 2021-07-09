@@ -101,6 +101,7 @@ namespace QAMS.Module.BusinessObjects.TestManagement
             set { SetPropertyValue<MyUser>("RunAssigned", value); }
         }
 
+
         private DevExpress.Xpo.XPCollection<RunResult> _RunResults;
         [XafDisplayName("Run Result")]
         [DevExpress.Xpo.Aggregated]
