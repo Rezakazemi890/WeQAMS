@@ -38,267 +38,263 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Dashboard.v21.1.Core">
+    <Reference Include="DevExpress.Dashboard.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Dashboard.v21.1.Web">
+    <Reference Include="DevExpress.Dashboard.v20.2.Web">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Dashboard.v21.1.Web.WebForms">
+    <Reference Include="DevExpress.Dashboard.v20.2.Web.WebForms">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Data.v21.1">
+    <Reference Include="DevExpress.Data.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v21.1">
+    <Reference Include="DevExpress.DataAccess.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.AuditTrail.v21.1">
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Chart.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Chart.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Chart.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Chart.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.CloneObject.v21.1">
+    <Reference Include="DevExpress.ExpressApp.CloneObject.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v21.1">
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Dashboards.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Dashboards.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Dashboards.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Dashboards.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.FileAttachment.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.FileAttachment.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.HtmlPropertyEditor.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.HtmlPropertyEditor.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Notifications.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Notifications.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Notifications.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Notifications.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Objects.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Objects.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Office.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Office.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Office.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Office.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.PivotChart.v21.1">
+    <Reference Include="DevExpress.ExpressApp.PivotChart.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.PivotChart.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.PivotChart.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.PivotGrid.v21.1">
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.PivotGrid.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.ReportsV2.v21.1">
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.ReportsV2.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Scheduler.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Scheduler.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Scheduler.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Scheduler.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Security.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Security.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Security.Xpo.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Security.Xpo.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v21.1">
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.TreeListEditors.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.v21.1">
+    <Reference Include="DevExpress.ExpressApp.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Validation.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Validation.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Validation.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Validation.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.ViewVariantsModule.v21.1">
+    <Reference Include="DevExpress.ExpressApp.ViewVariantsModule.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Web.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Xpo.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Xpo.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Office.v21.1.Core">
+    <Reference Include="DevExpress.Office.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Persistent.Base.v21.1">
+    <Reference Include="DevExpress.Persistent.Base.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Persistent.BaseImpl.v21.1">
+    <Reference Include="DevExpress.Persistent.BaseImpl.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v21.1.Core">
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Printing.v21.1.Core">
+    <Reference Include="DevExpress.Printing.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v21.1.Core">
+    <Reference Include="DevExpress.RichEdit.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Spreadsheet.v21.1.Core">
+    <Reference Include="DevExpress.Spreadsheet.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Utils.v21.1">
+    <Reference Include="DevExpress.Utils.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v21.1">
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxPivotGrid.v21.1">
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxRichEdit.v21.1">
+    <Reference Include="DevExpress.Web.ASPxRichEdit.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxScheduler.v21.1">
+    <Reference Include="DevExpress.Web.ASPxScheduler.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxSpellChecker.v21.1">
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v21.1">
+    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxTreeList.v21.1">
+    <Reference Include="DevExpress.Web.ASPxTreeList.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Web.v21.1">
+    <Reference Include="DevExpress.Web.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Xpo.v21.1">
+    <Reference Include="DevExpress.Xpo.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Charts.v21.1.Core">
+    <Reference Include="DevExpress.XtraCharts.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.1">
+    <Reference Include="DevExpress.XtraCharts.v20.2.Web">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.1.Web">
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.2">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DevExpress.XtraReports.v21.1">
+    <Reference Include="DevExpress.XtraReports.v20.2.Web">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v21.1.Web">
+    <Reference Include="DevExpress.XtraReports.v20.2.Web.WebForms">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v21.1.Web.WebForms">
+    <Reference Include="DevExpress.XtraScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1.Core">
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core.Desktop">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1.Core.Desktop">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.XtraScheduler.v20.2.GoogleCalendar, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1.GoogleCalendar, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="Google.Apis, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
@@ -361,9 +357,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\CalendarController.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Controllers\CalendarController.cs" />
     <Compile Include="Controllers\CalendarController.Designer.cs">
       <DependentUpon>CalendarController.cs</DependentUpon>
     </Compile>
@@ -372,9 +366,7 @@
     <Compile Include="Controllers\WebDashboardController.cs" />
     <Compile Include="Editors\CalculatedValueChartEditor.cs" />
     <Compile Include="Editors\WebProgressBarEditor.cs" />
-    <Compile Include="WebModule.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="WebModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebModule.Designer.cs">
       <DependentUpon>WebModule.cs</DependentUpon>
