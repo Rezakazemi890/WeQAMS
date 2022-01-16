@@ -9,5 +9,7 @@ Currently working on the web version and the desktop version does not work curre
 # prerequisites:
 
 .net framework v4.5.2 or higher
+
 sql server for database
+
 DevExpress Component v21 or higher
